@@ -59,7 +59,7 @@ p{
     height: 60px;
     padding: 0 1rem;
     /* overflow: hidden; */
-    background-color: #ffffff;
+    background-color: #fff;
 }
 .logo-head{
     display: flex;
@@ -77,8 +77,8 @@ p{
 .ph-img{
     position: relative;
     width: 100%;
-    height: 450px;
-    overflow: hidden;
+    height: 500px;
+    /* overflow: hidden; */
 }
 .image-1 img{
     position: absolute;
@@ -101,6 +101,9 @@ p{
     align-items: center;
     margin-bottom: 2.5rem;
 }
+/* box-1-text>p:first-child{
+    margin-top: 3rem;
+} */
 .box-1-text>p:nth-child(2){
     margin-bottom: 1rem;
 }
@@ -211,11 +214,81 @@ h3{
         transform: translateY(-100%);
     }
 }
-
-@media (min-width: 800px){
-    body{
-        background-color: red;
+.fmenu{
+    display: none;
+}
+@media (min-width: 800px) {
+    .fmenu{
+        display: inline-block;
     }
+    .menu{
+        display: none;
+    }
+    .flex-box-1{
+        display: flex;
+        flex-direction: row-reverse;
+        /* height: 700px; */
+    }
+    .ph-img{
+        height: 600px;
+    }
+    .image-1 img{
+        width: 80%;
+    }
+    .box-1-text{
+        align-self: center;
+    }
+    .box-2{
+        text-align: left;
+    }
+    .box-2>p:nth-child(2){
+        width: 50%;
+    }
+    .box-2-flex{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+    }
+    .box-3>p:first-child{
+        text-align: left;
+    }
+    .box3-flex{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+    }
+    .foot{
+        display: flex;
+        justify-content: space-around;
+    }
+    .foot ul{
+        list-style: none;
+    }
+    .social{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 10px;
+    }
+    
+    .fmenu-list{
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 20%;
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+
+    }
+    .fmenu-list li{
+        padding: 0 3rem;
+    }
+    .fmenu-list a{
+        text-decoration: none;
+        color: #868383;
+        font-size: 1.5rem;
+    }
+    
 }
 
 
